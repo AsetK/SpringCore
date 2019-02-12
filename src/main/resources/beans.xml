@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="cat" class="com.epam.firstmavenspring.animals.xml_config.Cat">
+        <property name="dog" ref="dog"></property>
+    </bean>
+    <bean id="dog" class="com.epam.firstmavenspring.animals.xml_config.Dog" scope="prototype">
+        <constructor-arg ref="parrot"></constructor-arg>
+    </bean>
+    <bean id="parrot" class="com.epam.firstmavenspring.animals.xml_config.Parrot">
+        <property name="name" value="kesha"></property>
+    </bean>
+
+</beans>
