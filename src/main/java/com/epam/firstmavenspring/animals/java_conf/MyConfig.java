@@ -20,15 +20,15 @@ public class MyConfig {
 
 
     @Bean
-    public Dog getDog()
+    public Dog dog()
     {
         System.out.println("Dog");
         return new Dog();
     }
 
     @Bean
-    @Primary
-    public Dog secondGetDog()
+    //@Primary
+    public Dog secondDog()
     {
         Dog dog = new Dog();
         dog.setName("Rex");

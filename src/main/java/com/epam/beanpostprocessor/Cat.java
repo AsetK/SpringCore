@@ -1,15 +1,19 @@
 package com.epam.beanpostprocessor;
 
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 
 @Component
+@Primary
 public class Cat implements InitializingBean {
 
-    String name = "kisa";
+    String name = "first kisa";
 
 //    public Cat (@Value("kisa") String catName)
 //    {
@@ -40,7 +44,16 @@ public class Cat implements InitializingBean {
     @Override
     public void afterPropertiesSet() throws Exception
     {
-        this.setName("new kisa");
+        this.setName("changed kisa");
         System.out.println("afterPropertiesSet: " + this);
+    }
+
+    @Bean(name = "second")
+    //@Qualifier("second")
+    public Cat instanceCat()
+    {
+        Cat cat = new Cat();
+        cat.setName("second kisa");
+        return cat;
     }
 }

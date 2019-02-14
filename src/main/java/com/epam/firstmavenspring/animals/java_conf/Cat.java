@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class Cat {
 
     private String name = "cat";
-    @Autowired
+    //@Autowired
     private Dog dog;
 
     public String getName() {
@@ -17,7 +17,13 @@ public class Cat {
         this.name = name;
     }
 
-    public Dog getDog() {
+    public Dog getFirstDog() {
         return dog;
+    }
+
+    @Autowired
+    public void setFirstDog(Dog dog)
+    {
+        this.dog = dog;
     }
 }

@@ -8,7 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ApplicationContext context = new AnnotationConfigApplicationContext("com.epam.beanpostprocessor");
+        ApplicationContext context = new AnnotationConfigApplicationContext(MyConfig.class);
         Cat cat = context.getBean(Cat.class);
         System.out.println(cat);
 
