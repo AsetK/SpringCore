@@ -1,9 +1,8 @@
-package com.epam.firstmavenspring.animals.java_conf;
+package com.epam.beanconfiguration.java_conf;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
 
 @Configuration
 //@ComponentScan("package address") if we use combined type of configuration. In "package address" we have classes annotated by @Component

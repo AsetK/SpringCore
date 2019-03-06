@@ -1,4 +1,4 @@
-package com.epam.firstmavenspring.animals.java_conf;
+package com.epam.beanconfiguration.java_conf;
 
 
 public class Parrot {

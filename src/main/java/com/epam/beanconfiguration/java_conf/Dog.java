@@ -1,10 +1,8 @@
-package com.epam.firstmavenspring.animals.java_conf;
+package com.epam.beanconfiguration.java_conf;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-
-import javax.annotation.Resource;
 
 public class Dog {
 

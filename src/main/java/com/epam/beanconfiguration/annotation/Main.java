@@ -1,4 +1,4 @@
-package com.epam.firstmavenspring.animals.annotation;
+package com.epam.beanconfiguration.annotation;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ApplicationContext context = new AnnotationConfigApplicationContext("com.epam.firstmavenspring.animals.annotation");
+        ApplicationContext context = new AnnotationConfigApplicationContext("com.epam.beanconfiguration.annotation");
 
         Cat cat = context.getBean(Cat.class); //we can use interface too
         System.out.println(cat.getName());

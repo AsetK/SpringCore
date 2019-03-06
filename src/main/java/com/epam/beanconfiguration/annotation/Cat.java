@@ -1,13 +1,8 @@
-package com.epam.firstmavenspring.animals.annotation;
+package com.epam.beanconfiguration.annotation;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-
-import javax.annotation.Resource;
-import javax.inject.Inject;
-import javax.inject.Named;
 
 @Component // or @Named, or @ManagedBean
 public class Cat {

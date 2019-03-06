@@ -1,7 +1,6 @@
-package com.epam.firstmavenspring.animals.xml_config;
+package com.epam.beanconfiguration.xml_config;
 
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {

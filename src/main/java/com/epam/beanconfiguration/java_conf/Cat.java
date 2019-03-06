@@ -1,10 +1,12 @@
-package com.epam.firstmavenspring.animals.xml_config;
+package com.epam.beanconfiguration.java_conf;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class Cat {
 
     private String name = "cat";
+    //@Autowired
     private Dog dog;
 
     public String getName() {
@@ -15,13 +17,13 @@ public class Cat {
         this.name = name;
     }
 
-    public Dog getDog()
-    {
+    public Dog getFirstDog() {
         return dog;
     }
 
-    public void setDog(Dog dog) {
+    @Autowired
+    public void setFirstDog(Dog dog)
+    {
         this.dog = dog;
-    } //injecting by setter
-
+    }
 }

@@ -1,4 +1,4 @@
-package com.epam.firstmavenspring.animals.annotation;
+package com.epam.beanconfiguration.annotation;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;

@@ -1,4 +1,4 @@
-package com.epam.firstmavenspring.animals.xml_config;
+package com.epam.beanconfiguration.xml_config;
 
 
 

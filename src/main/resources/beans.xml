@@ -4,13 +4,13 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="cat" class="com.epam.firstmavenspring.animals.xml_config.Cat">
+    <bean id="cat" class="com.epam.beanconfiguration.xml_config.Cat">
         <property name="dog" ref="dog"></property>
     </bean>
-    <bean id="dog" class="com.epam.firstmavenspring.animals.xml_config.Dog" scope="prototype">
+    <bean id="dog" class="com.epam.beanconfiguration.xml_config.Dog" scope="prototype">
         <constructor-arg ref="parrot"></constructor-arg>
     </bean>
-    <bean id="parrot" class="com.epam.firstmavenspring.animals.xml_config.Parrot">
+    <bean id="parrot" class="com.epam.beanconfiguration.xml_config.Parrot">
         <property name="name" value="kesha"></property>
     </bean>
 

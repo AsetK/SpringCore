@@ -1,4 +1,4 @@
-package com.epam.firstmavenspring.animals.java_conf;
+package com.epam.beanconfiguration.java_conf;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
