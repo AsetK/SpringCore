@@ -22,7 +22,7 @@ public class Cat {
     }
 
     @Autowired
-    public void setFirstDog(Dog dog)
+    public void setFirstDog(Dog dog) // Injects by type. If multiple beans - try to find by field name(field autowiring) or method parameter name(method autowiring). If no matches - exc.
     {
         this.dog = dog;
     }

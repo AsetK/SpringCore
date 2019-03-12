@@ -38,7 +38,7 @@ public class MyConfig {
     @Qualifier("main")
     public Parrot getParrot()
     {
-        System.out.println("Parrot");
+        System.out.println("Parrot_1");
         return new Parrot();
     }
 
@@ -46,7 +46,7 @@ public class MyConfig {
     @Qualifier("notMain")
     public Parrot getParrot2()
     {
-        System.out.println("Parrot");
+        System.out.println("Parrot_2");
         Parrot parrot = new Parrot();
         parrot.setName("ne kesha");
         return parrot;
