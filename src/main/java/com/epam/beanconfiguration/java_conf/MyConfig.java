@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 public class MyConfig {
 
     @Bean
-    public Cat getCat(@Qualifier("main") Parrot parrot) // spring at first creates parrot bean, then cat bean, cuz cat depends on parrot. Dependency injection
+    public Cat getCat(@Qualifier("parrot-kesha") Parrot parrot) // spring at first creates parrot bean, then cat bean, cuz cat depends on parrot. Dependency injection
     {
         System.out.println("Cat");
         Cat cat = new Cat();

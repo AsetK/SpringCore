@@ -14,6 +14,7 @@ public class CustomBeanPostProcessor implements BeanPostProcessor {
         {
             Cat cat = (Cat)bean;
         }
+
         System.out.println("CustomBeanPostProcessor - before: " + bean);
         return bean;
     }
@@ -24,7 +25,9 @@ public class CustomBeanPostProcessor implements BeanPostProcessor {
         {
             Cat cat = (Cat)bean;
         }
+
         System.out.println("CustomBeanPostProcessor - after: " + bean);
+        System.out.println();
         return bean;
     }
 

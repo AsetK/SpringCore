@@ -1,5 +1,4 @@
-package com.epam.beanpostprocessor;
-
+package com.epam.eventlistening;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -8,11 +7,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ApplicationContext context = new AnnotationConfigApplicationContext(MyConfig.class);
+        ApplicationContext context = new AnnotationConfigApplicationContext("com.epam.eventlistening");
         Cat cat = context.getBean(Cat.class);
-        System.out.println(cat);
-        ((AnnotationConfigApplicationContext) context).close();
-
+        cat.speak();
 
 
     }

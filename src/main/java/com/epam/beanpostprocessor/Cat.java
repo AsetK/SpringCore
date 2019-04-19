@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
 @Component
 @Primary
@@ -28,13 +29,6 @@ public class Cat implements InitializingBean {
         this.name = name;
     }
 
-    @Override
-    public String toString() {
-        return "Cat{" +
-                "name='" + name + '\'' +
-                '}';
-    }
-
     @PostConstruct
     public void init()
     {
@@ -44,8 +38,13 @@ public class Cat implements InitializingBean {
     @Override
     public void afterPropertiesSet() throws Exception
     {
-        this.setName("changed kisa");
         System.out.println("afterPropertiesSet: " + this);
+    }
+
+    @PreDestroy
+    public void destroy()
+    {
+        System.out.println("PreDestroy: " + this);
     }
 
     @Bean(name = "second")
@@ -55,5 +54,12 @@ public class Cat implements InitializingBean {
         Cat cat = new Cat();
         cat.setName("second kisa");
         return cat;
+    }
+
+    @Override
+    public String toString() {
+        return "Cat{" +
+                "name='" + name + '\'' +
+                '}';
     }
 }
